@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Animated-Profile-Card.css">
+    <link rel="stylesheet" type="text/css" href="Hover-Profile-Card.css">
 
 </head>
 
@@ -89,6 +90,49 @@
                 </div>
             </div>
         </div>
+
+
+        <!------- Hover Profile Card ------>
+        <section id="Hover-Profile-Card">
+            <div class="containerz">
+                <div class="wrapper">
+                    <a href="#">
+                        <img src="profile.jpg" alt="">
+                    </a>
+                    <div class="titlez">
+                        Andrew Neil</div>
+                    <div class="place">
+                        Surkhet, Nepal</div>
+                </div>
+                <div class="contentz">
+                    <p>
+                        User Interface Designer and <br>front-end developer</p>
+                    <div class="buttonsz">
+                        <div class="btn">
+                            <button>Message</button>
+                        </div>
+                        <div class="btn">
+                            <button>Following</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="iconsz">
+                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                </div>
+            </div>
+        </section>
+
+
+        <script>
+            const img = document.querySelector("img");
+            const icons = document.querySelector(".icons");
+            img.onclick = function(){
+              this.classList.toggle("active");
+              icons.classList.toggle("active");
+            }
+          </script>
 
         <script src="Animated-Profile-Card.js"></script>
     </section>
