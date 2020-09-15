@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&displayer=swap');
+
+#Colorful-Product-Card {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    min-height: 85vh;
+    background: #09161d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cardAx {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    background: #122936;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cardAx:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:  #2196f3;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.cardAx:hover:before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+ .cardAx::after {
+    content: 'APEX';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 8em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+ .cardAx .imgAx {
+    position: relative;
+    left: -15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.cardAx .imgAx img {
+    max-width: 100%;
+    transition: 0.5s;
+}
+
+.cardAx:hover .imgAx img {
+    max-width: 85%;
+}
+
+.cardAx .contentAx {
+    margin: 20px auto;
+    left: 40px;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+
+.cardAx .contentAx h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.cardAx .contentAx .priceAx {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.cardAx .contentAx .buyAx {
+    position: relative;
+    top: 200px;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 30px;
+    margin-top: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #2196f3;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.cardAx:hover .contentAx .buyAx {
+    opacity: 1;
+    top: 0;
+} 
+
+.cardAx .contentAx .buyAx:hover {
+    background: #0136af;
+}
