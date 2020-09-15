@@ -7,11 +7,14 @@
     <title>Product Card Effect</title>
 
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!--For T-shirt Product-->
     <link
         href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Animated-Profile-Card.css">
     <link rel="stylesheet" type="text/css" href="Hover-Profile-Card.css">
+    <link rel="stylesheet" type="text/css" href="T-shirt-Product-Card.css">
 
 </head>
 
@@ -125,15 +128,79 @@
         </section>
 
 
+        <!------- T-shirt Product Card ------>
+        <section id="T-shirt-Product-Card">
+            <div class="containery">
+                <div class="imagey">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="T-shirt">
+                </div>
+                <div class="card-contenty">
+                    <div class="wrappery">
+                        <div class="titley">
+                            Adidas Originals</div>
+                        <p>
+                            Men's running tshirt</p>
+                        <span class="pricey">$29.99</span>
+                        <div class="contenty sizey">
+                            <div class="namey size-namey">
+                                Size</div>
+                            <div class="size-valuey">
+                                <span class="color">XS</span>
+                                <span class="color">S</span>
+                                <span class="active">M</span>
+                                <span class="color">L</span>
+                                <span class="color">XL</span>
+                            </div>
+                        </div>
+                        <div class="contenty coloury">
+                            <div class="namey colour-namey">
+                                Colour</div>
+                            <div class="colour-valuey">
+                                <span class="whitey" data-color="lightgrey"
+                                    data-img="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large2.png"></span>
+                                <span class="bluey activey" data-color="#456ABD"
+                                    data-img="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large.png"></span>
+                                <span class="yellowy" data-color="#EAA523"
+                                    data-img="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large3.png"></span>
+                            </div>
+                        </div>
+                        <div class="btnsy">
+                            <button>Buy now</button>
+                            <button>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!------- Hover Profile Card ------>
         <script>
             const img = document.querySelector("img");
             const icons = document.querySelector(".icons");
-            img.onclick = function(){
-              this.classList.toggle("active");
-              icons.classList.toggle("active");
+            img.onclick = function () {
+                this.classList.toggle("active");
+                icons.classList.toggle("active");
             }
-          </script>
+        </script>
 
+        <!------- T-shirt Product Card ------>
+        <script>
+            $(".colour-valuey span").click(function () {
+                $(".colour-valuey span").removeClass("active");
+                $(this).addClass("active");
+                $("#T-shirt-Product-Card").css("background", $(this).attr("data-color"));
+                $(".wrappery .pricey").css("color", $(this).attr("data-color"));
+                $(".size-valuey span.color").css("color", $(this).attr("data-color"));
+                $(".size-valuey span.active").css("background", $(this).attr("data-color"));
+                $(".imagey img").attr("src", $(this).attr("data-img"));
+                $(".btnsy button").css({
+                    "background": $(this).attr("data-color"),
+                    "border-color": $(this).attr("data-color")
+                });
+            });
+        </script>
+
+        <!------- Animated Profile Card ------>
         <script src="Animated-Profile-Card.js"></script>
     </section>
 </body>

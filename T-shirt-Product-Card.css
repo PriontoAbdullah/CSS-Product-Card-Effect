@@ -1,0 +1,166 @@
+#T-shirt-Product-Card {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    padding: 50px;
+    min-height: 100vh;
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #456ABD;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.containery{
+  position: relative;
+  height: 500px;
+  width: 380px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.containery:hover{
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+}
+.containery .imagey{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.containery .imagey img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.containery:hover .imagey img{
+  transform: scale(1.1);
+}
+.containery .card-contenty{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.card-contenty .wrappery{
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  background: #fff;
+  padding: 10px 25px;
+  box-shadow: -1px -1px 6px rgba(0,0,0,0.1);
+  transition: bottom 0.3s ease;
+}
+.containery:hover .card-contenty .wrappery{
+  bottom: 0px;
+}
+.wrappery .titley{
+  font-size: 22px;
+  font-weight: 500;
+}
+.wrappery p{
+  font-size: 17px;
+  color: grey;
+}
+.wrappery .pricey{
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 23px;
+  font-weight: 600;
+  color: #456ABD;
+}
+.wrappery .contenty{
+  margin: 10px 0;
+}
+.wrappery .contenty .namey{
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.wrappery .contenty .size-valuey{
+  width: 50%;
+  display: flex;
+  margin: 5px 0;
+  justify-content: space-between;
+}
+.contenty .size-valuey span{
+  display: block;
+  height: 28px;
+  width: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #456ABD;
+}
+.contenty .size-valuey span.active{
+  background: #456ABD;
+  color: #fff;
+}
+.contenty .colour-valuey{
+  width: 30%;
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+.contenty .colour-valuey span{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.contenty .colour-valuey span.whitey{
+  background: lightgrey;
+}
+.contenty .colour-valuey span.bluey{
+  background: #456ABD;
+}
+.contenty .colour-valuey span.yellowy{
+  background: #EAA523;
+}
+.contenty .colour-valuey span.active:after{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: -4px;
+  top: -4px;
+  box-sizing: border-box;
+  border: 2px solid #456ABD;
+  border-radius: 50%;
+}
+.contenty .colour-valuey span.white.active:after{
+  border-color: lightgrey;
+}
+.contenty .colour-valuey span.yellow.active:after{
+  border-color: #EAA523;
+}
+.wrappery .btnsy{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.wrappery .btnsy button{
+  height: 40px;
+  width: 100%;
+  margin: 0 10px;
+  border: 2px solid #456ABD;
+  background: #456ABD;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
