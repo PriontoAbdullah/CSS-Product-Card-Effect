@@ -197,7 +197,7 @@
     text-transform: uppercase;
 }
 
-.title{
+.titlex{
     position: relative;
     color: #555;
     font-weight: 500;
@@ -207,7 +207,7 @@
     display: inline-block;
 }
 
-.title:after{
+.titlex:after{
     content: '';
     position: absolute;
     height: 3px;
@@ -270,7 +270,7 @@
     margin-right: 3px;
 }
 
-.share{
+.shares{
     padding: 7.6px 0;
     width: 100%;
     border: 2px solid #4facfe;
