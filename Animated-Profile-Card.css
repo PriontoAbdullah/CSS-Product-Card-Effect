@@ -11,7 +11,7 @@
     background-color: #efefef;
 }
 
-.container{
+.containero{
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -237,6 +237,7 @@
 
 .icon:hover{
     color: #4facfe;
+    text-decoration: none;
 }
 
 .buttons-wrap{
@@ -282,6 +283,16 @@
     text-transform: uppercase;
     margin-left: 3px;
     border-radius: 18.1px;
+}
+
+.follow:hover, .shares:hover{
+    flex: 5;
+    text-decoration: none;
+    color: #4facfe;
+}
+
+.follow:hover {
+    color: #fff;
 }
 
 .modal{

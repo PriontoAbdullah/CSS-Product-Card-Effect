@@ -80,7 +80,7 @@
 }
 
 .flip-card .back .back-header img {
-    width: 55%;
+    width: 50%;
     margin-top: 12px;
 }
 
@@ -89,12 +89,16 @@
 }
 
 .flip-card .back .back-footer h2{
-    margin-bottom: 10px;
+    margin-top: -20px;
 }
 
 .flip-card .back .back-footer .dollar {
-    margin-top: 10px;
+    margin-top: -10px;
     font-size: 24px;
+}
+
+.flip-card .back .back-footer .rating {
+    margin-top: -10px;
 }
 
 .flip-card .back .back-footer a {
@@ -105,7 +109,7 @@
     padding: 7px 5px;
     border: 1px solid #000;
     color: #000;
-    margin-top: 12px;
+    margin-top: 10px;
     transition: 0.5s;
 }
 
